@@ -1,6 +1,7 @@
 {% extends "listings/base.html" %} {% block content %}
 <h1>Listings:</h1>
 <ul>
+  <a href="{% url 'listing-create' %}">Create new Listing</a>
   {% for listing in listings %}
   <li><a href="{% url 'listing-detail' listing.id %}">{{listing.title}}</a></li>
   {% endfor %}
