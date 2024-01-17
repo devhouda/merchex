@@ -1,9 +1,8 @@
 {% extends "listings/base.html" %} {% block content %}
-<h1>Hello Django!</h1>
-<p>These are my favorite bands:</p>
+<h1>Bands:</h1>
 <ul>
   {% for band in bands %}
-  <li>{{band.name}}</li>
+  <li><a href="{% url 'band-detail' band.id %}">{{band.name}}</a></li>
   {% endfor %}
 </ul>
 {% endblock %}
