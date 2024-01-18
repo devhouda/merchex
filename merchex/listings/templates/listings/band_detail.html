@@ -17,5 +17,7 @@
   </li>
   <p>{{ band.biography }}</p>
 </ul>
+<a href="{% url 'band-update' band.id %}">Edit this band</a>
+<a href="{% url 'band-delete' band.id %}">Delete this band</a>
 <a href="{% url 'band-list' %}">Back to all bands</a>
 {% endblock %}
